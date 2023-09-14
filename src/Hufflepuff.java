@@ -17,11 +17,6 @@ public class Hufflepuff extends Student {
     }
 
     @Override
-    public void compareStudent(Gryffindorr student1, Gryffindorr student2) {
-
-    }
-
-    @Override
     public String toString() {
         return " " + getNameOne() + " " + getNameTwo() +
                 "\nConjure:" + getMsConjure() +
@@ -63,6 +58,11 @@ public class Hufflepuff extends Student {
         return skillRate;
     }
     public void updateSkillRate() { this.skillRate = fsCorrect+fsHonest+fsIndustrious; }
+
+    @Override
+    public void compareStudent(Gryffindorr student1, Gryffindorr student2) {
+
+    }
 
     @Override
     public void compareStudent(Hufflepuff student1, Hufflepuff student2) {

@@ -1,7 +1,6 @@
 import java.util.List;
 
 public class Hogwarts {
-
     void InitialStudent(List<Object> allStudent) {
         allStudent.add(new Gryffindorr("Harri", "Potter"));
         allStudent.add(new Gryffindorr("Hermione", "Granger"));
@@ -20,7 +19,7 @@ public class Hogwarts {
         allStudent.add(new Slytherin("Gregory", "Goyle"));
     }
 
-    static void compareMagic(Student student1, Student student2) {
+    public static void compareMagic(Student student1, Student student2) {
         if (student1.getMsConjure()> student2.getMsConjure()) {
             System.out.println(student1.getName() + " обладает бОльшей мощностью магии, чем " + student2.getName() + ".");
         } else {

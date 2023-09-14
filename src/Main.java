@@ -9,7 +9,6 @@ public class Main {
         Hogwarts hogwarts = new Hogwarts();
         hogwarts.InitialStudent(allStudent);
 
-
         for (Object student : allStudent) {
             System.out.println(student.toString());
         }

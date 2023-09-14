@@ -62,7 +62,6 @@ public class Ravenclaw extends Student {
         this.fsCreativity = fsCreativity;
         updateSkillRate();
     }
-
     @Override
     public String toString() {
         return " " + this.getNameOne() + " " + this.getNameTwo() +

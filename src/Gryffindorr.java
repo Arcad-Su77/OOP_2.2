@@ -54,7 +54,6 @@ public class Gryffindorr extends Student {
                 ", nobleness:" + getFsNobleness() +
                 '}';
     }
-
     public int getSkillRate() {
         return skillRate;
     }

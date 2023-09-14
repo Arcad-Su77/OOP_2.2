@@ -18,20 +18,6 @@ public class Slytherin extends Student {
         this.fsPowerLust = random.nextInt(60);
     }
 
-    @Override
-    public void compareStudent(Gryffindorr student1, Gryffindorr student2) {
-
-    }
-
-    @Override
-    public void compareStudent(Hufflepuff student1, Hufflepuff student2) {
-
-    }
-
-    @Override
-    public void compareStudent(Ravenclaw student1, Ravenclaw student2) {
-
-    }
 
     public int getFsCunning() {
         return fsCunning;
@@ -72,7 +58,6 @@ public class Slytherin extends Student {
     public int getFsPowerLust() {
         return fsPowerLust;
     }
-
     public void setFsPowerLust(int fsPowerLust) {
         this.fsPowerLust = fsPowerLust;
         updateSkillRate();
@@ -104,4 +89,19 @@ public class Slytherin extends Student {
             System.out.println(student2.getName() + " лучший Слизерин, чем " + student1.getName());
         }
     }
+    @Override
+    public void compareStudent(Gryffindorr student1, Gryffindorr student2) {
+
+    }
+
+    @Override
+    public void compareStudent(Hufflepuff student1, Hufflepuff student2) {
+
+    }
+
+    @Override
+    public void compareStudent(Ravenclaw student1, Ravenclaw student2) {
+
+    }
+
 }
