@@ -10,7 +10,6 @@ public class Main {
         hogwarts.InitialStudent(allStudent);
 
 
-
         for (Object student : allStudent) {
             System.out.println(student.toString());
         }

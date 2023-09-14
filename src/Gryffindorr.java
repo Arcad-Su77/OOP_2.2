@@ -58,10 +58,10 @@ public class Gryffindorr extends Student {
     public int getSkillRate() {
         return skillRate;
     }
-
     public void updateSkillRate() {
         this.skillRate = fsBraveness+fsHonor+fsNobleness;
     }
+
     @Override
     public void compareStudent(Gryffindorr student1, Gryffindorr student2) {
         if (student1.getSkillRate() > student2.getSkillRate()) {
@@ -70,5 +70,6 @@ public class Gryffindorr extends Student {
             System.out.println(student2.getName() + " лучший Гриффиндорец, чем " + student1.getName());
         }
     }
+
 
 }

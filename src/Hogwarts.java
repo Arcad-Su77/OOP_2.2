@@ -1,8 +1,8 @@
 import java.util.List;
 
-public interface Hogwarts {
+public class Hogwarts {
 
-    default void InitialStudent(List<Object> allStudent) {
+    void InitialStudent(List<Object> allStudent) {
         allStudent.add(new Gryffindorr("Harri", "Potter"));
         allStudent.add(new Gryffindorr("Hermione", "Granger"));
         allStudent.add(new Gryffindorr("Ron", "Weasley"));
@@ -28,6 +28,8 @@ public interface Hogwarts {
         }
     }
 
-    void compareStudent(Object student1, Object student);
+    void compareStudent(Object student1, Object student) {
+
+    }
 
 }

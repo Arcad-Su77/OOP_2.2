@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public abstract class Student implements Hogwarts {
+abstract class Student {
     private int msConjure;
     private int msTransgress;
     private String nameOne;

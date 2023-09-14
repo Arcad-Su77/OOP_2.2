@@ -57,9 +57,8 @@ public class Hufflepuff extends Student {
     public int getSkillRate() {
         return skillRate;
     }
-    public void updateSkillRate() {
-        this.skillRate = fsCorrect+fsHonest+fsIndustrious;
-    }
+    public void updateSkillRate() { this.skillRate = fsCorrect+fsHonest+fsIndustrious; }
+
     @Override
     public void compareStudent(Hufflepuff student1, Hufflepuff student2) {
         if (student1.getSkillRate() > student2.getSkillRate()) {

@@ -68,9 +68,8 @@ public class Ravenclaw extends Student {
     public int getSkillRate() {
         return skillRate;
     }
-    public void updateSkillRate() {
-        this.skillRate = fsCreativity+fsSmart+fsWise+fsWitty;
-    }
+    public void updateSkillRate() { this.skillRate = fsCreativity+fsSmart+fsWise+fsWitty; }
+
     @Override
     public void compareStudent(Ravenclaw student1, Ravenclaw student2) {
         if (student1.getSkillRate() > student2.getSkillRate()) {

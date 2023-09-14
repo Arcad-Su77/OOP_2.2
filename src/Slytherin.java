@@ -79,9 +79,8 @@ public abstract class Slytherin extends Student {
     public int getSkillRate() {
         return skillRate;
     }
-    public void updateSkillRate() {
-        this.skillRate = fsAmbition+fsCunning+fsDetermination+fsResourcefulness+fsPowerLust;
-    }
+    public void updateSkillRate() { this.skillRate = fsAmbition+fsCunning+fsDetermination+fsResourcefulness+fsPowerLust; }
+
     @Override
     public void compareStudent(Slytherin student1, Slytherin student2) {
         if (student1.getSkillRate() > student2.getSkillRate()) {
