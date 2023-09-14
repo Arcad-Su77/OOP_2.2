@@ -17,11 +17,16 @@ public class Hufflepuff extends Student {
     }
 
     @Override
+    public void compareStudent(Gryffindorr student1, Gryffindorr student2) {
+
+    }
+
+    @Override
     public String toString() {
-        return " " + this.getNameOne() + " " + this.getNameTwo() +
+        return " " + getNameOne() + " " + getNameTwo() +
                 "\nConjure:" + getMsConjure() +
                 " Transgress:" + getMsTransgress() +
-                "\tskill Hufflepuff SkillRate:" + skillRate +" {" +
+                "\tskill Hufflepuff SkillRate:" + getSkillRate() +" {" +
                 "Honest:" + getFsHonest() +
                 ", Correct:" + getFsCorrect() +
                 ", Industrious:" + getFsIndustrious() +
@@ -66,5 +71,15 @@ public class Hufflepuff extends Student {
         } else {
             System.out.println(student2.getName() + " лучший Пуффендуй, чем " + student1.getName());
         }
+    }
+
+    @Override
+    public void compareStudent(Ravenclaw student1, Ravenclaw student2) {
+
+    }
+
+    @Override
+    public void compareStudent(Slytherin student1, Slytherin student2) {
+
     }
 }

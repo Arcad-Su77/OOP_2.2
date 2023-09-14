@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public abstract class Slytherin extends Student {
+public class Slytherin extends Student {
     int fsCunning;
     int fsDetermination;
     int fsAmbition;
@@ -16,6 +16,21 @@ public abstract class Slytherin extends Student {
         this.fsDetermination = random.nextInt(60);
         this.fsResourcefulness = random.nextInt(60);
         this.fsPowerLust = random.nextInt(60);
+    }
+
+    @Override
+    public void compareStudent(Gryffindorr student1, Gryffindorr student2) {
+
+    }
+
+    @Override
+    public void compareStudent(Hufflepuff student1, Hufflepuff student2) {
+
+    }
+
+    @Override
+    public void compareStudent(Ravenclaw student1, Ravenclaw student2) {
+
     }
 
     public int getFsCunning() {
@@ -65,15 +80,15 @@ public abstract class Slytherin extends Student {
 
     @Override
     public String toString() {
-        return " " + this.getNameOne() + " " + this.getNameTwo() +
+        return " " + getNameOne() + " " + getNameTwo() +
                 "\nConjure:" + getMsConjure() +
                 " Transgress:" + getMsTransgress() +
-                "\tskill Slytherin SkillRate:" + skillRate +" {" +
-                "fsCunning:" + fsCunning +
-                ", fsDetermination:" + fsDetermination +
-                ", fsAmbition:" + fsAmbition +
-                ", fsResourcefulness:" + fsResourcefulness +
-                ", fsPowerLust:" + fsPowerLust +
+                "\tskill Slytherin SkillRate:" + getSkillRate() +" {" +
+                "fsCunning:" + getFsCunning() +
+                ", fsDetermination:" + getFsDetermination() +
+                ", fsAmbition:" + getFsAmbition() +
+                ", fsResourcefulness:" + getFsResourcefulness() +
+                ", fsPowerLust:" + getFsPowerLust() +
                 '}';
     }
     public int getSkillRate() {

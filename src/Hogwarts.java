@@ -29,6 +29,7 @@ public class Hogwarts {
     }
 
     void compareStudent(Object student1, Object student) {
+        System.out.println("Общий метод!");
 
     }
 

@@ -45,13 +45,13 @@ public class Gryffindorr extends Student {
 
     @Override
     public String toString() {
-        return " " + this.getNameOne() + " " + this.getNameTwo() +
+        return " " + getNameOne() + " " + getNameTwo() +
                 "\nConjure:" + getMsConjure() +
                 " Transgress:" + getMsTransgress() +
-                "\tskill Gryffindorr SkillRate:" + skillRate +" {" +
-                "honor:" + fsHonor +
-                ", braveness:" + fsBraveness +
-                ", nobleness:" + fsNobleness +
+                "\tskill Gryffindorr SkillRate:" + getSkillRate() +" {" +
+                "honor:" + getFsHonor() +
+                ", braveness:" + getFsBraveness() +
+                ", nobleness:" + getFsNobleness() +
                 '}';
     }
 
@@ -69,6 +69,21 @@ public class Gryffindorr extends Student {
         } else {
             System.out.println(student2.getName() + " лучший Гриффиндорец, чем " + student1.getName());
         }
+    }
+
+    @Override
+    public void compareStudent(Hufflepuff student1, Hufflepuff student2) {
+
+    }
+
+    @Override
+    public void compareStudent(Ravenclaw student1, Ravenclaw student2) {
+
+    }
+
+    @Override
+    public void compareStudent(Slytherin student1, Slytherin student2) {
+
     }
 
 

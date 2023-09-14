@@ -17,6 +17,16 @@ public class Ravenclaw extends Student {
         updateSkillRate();
     }
 
+    @Override
+    public void compareStudent(Gryffindorr student1, Gryffindorr student2) {
+
+    }
+
+    @Override
+    public void compareStudent(Hufflepuff student1, Hufflepuff student2) {
+
+    }
+
     public int getFsSmart() {
         return fsSmart;
     }
@@ -58,11 +68,11 @@ public class Ravenclaw extends Student {
         return " " + this.getNameOne() + " " + this.getNameTwo() +
                 "\nConjure:" + getMsConjure() +
                 " Transgress:" + getMsTransgress() +
-                "\tskill Ravenclaw SkillRate:" + skillRate + " {" +
-                "fsSmart:" + fsSmart +
-                ", fsWise:" + fsWise +
-                ", fsWitty:" + fsWitty +
-                ", fsCreativity:" + fsCreativity +
+                "\tskill Ravenclaw SkillRate:" + getSkillRate() + " {" +
+                "fsSmart:" + getFsSmart() +
+                ", fsWise:" + getFsWise() +
+                ", fsWitty:" + getFsWitty() +
+                ", fsCreativity:" + getFsCreativity() +
                 '}';
     }
     public int getSkillRate() {
@@ -77,5 +87,10 @@ public class Ravenclaw extends Student {
         } else {
             System.out.println(student2.getName() + " лучший Когтевран, чем " + student1.getName());
         }
+    }
+
+    @Override
+    public void compareStudent(Slytherin student1, Slytherin student2) {
+
     }
 }
