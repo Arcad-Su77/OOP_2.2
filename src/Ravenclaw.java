@@ -17,23 +17,17 @@ public class Ravenclaw extends Student {
         updateSkillRate();
     }
 
-    @Override
-    public void compareStudent(Gryffindorr student1, Gryffindorr student2) {
 
-    }
-
-    @Override
-    public void compareStudent(Hufflepuff student1, Hufflepuff student2) {
-
-    }
 
     public int getFsSmart() {
         return fsSmart;
     }
 
     public void setFsSmart(int fsSmart) {
-        this.fsSmart = fsSmart;
-        updateSkillRate();
+        if (fsSmart >= 0 && fsSmart <= 75) {
+            this.fsSmart = fsSmart;
+            updateSkillRate();
+        }
     }
 
     public int getFsWise() {
@@ -41,8 +35,10 @@ public class Ravenclaw extends Student {
     }
 
     public void setFsWise(int fsWise) {
-        this.fsWise = fsWise;
-        updateSkillRate();
+        if (fsWise >= 0 && fsWise <= 75) {
+            this.fsWise = fsWise;
+            updateSkillRate();
+        }
     }
 
     public int getFsWitty() {
@@ -50,8 +46,10 @@ public class Ravenclaw extends Student {
     }
 
     public void setFsWitty(int fsWitty) {
-        this.fsWitty = fsWitty;
-        updateSkillRate();
+        if (fsWitty >= 0 && fsWitty <= 75) {
+            this.fsWitty = fsWitty;
+            updateSkillRate();
+        }
     }
 
     public int getFsCreativity() {
@@ -59,8 +57,10 @@ public class Ravenclaw extends Student {
     }
 
     public void setFsCreativity(int fsCreativity) {
-        this.fsCreativity = fsCreativity;
-        updateSkillRate();
+        if (fsCreativity >= 0 && fsCreativity <= 75) {
+            this.fsCreativity = fsCreativity;
+            updateSkillRate();
+        }
     }
     @Override
     public String toString() {
@@ -87,9 +87,18 @@ public class Ravenclaw extends Student {
             System.out.println(student2.getName() + " лучший Когтевран, чем " + student1.getName());
         }
     }
+    @Override
+    public void compareStudent(Gryffindorr student1, Gryffindorr student2) {
 
+    }
+
+    @Override
+    public void compareStudent(Hufflepuff student1, Hufflepuff student2) {
+
+    }
     @Override
     public void compareStudent(Slytherin student1, Slytherin student2) {
 
     }
+
 }

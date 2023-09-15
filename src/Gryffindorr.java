@@ -21,8 +21,10 @@ public class Gryffindorr extends Student {
     }
 
     public void setFsHonor(int fsHonor) {
-        this.fsHonor = fsHonor;
-        updateSkillRate();
+        if (fsHonor >= 0 && fsHonor <= 100) {
+            this.fsHonor = fsHonor;
+            updateSkillRate();
+        }
     }
 
     public int getFsBraveness() {
@@ -30,8 +32,10 @@ public class Gryffindorr extends Student {
     }
 
     public void setFsBraveness(int fsBraveness) {
-        this.fsBraveness = fsBraveness;
-        updateSkillRate();
+        if (fsBraveness >= 0 && fsBraveness <= 100) {
+            this.fsBraveness = fsBraveness;
+            updateSkillRate();
+        }
     }
 
     public int getFsNobleness() {
@@ -39,8 +43,10 @@ public class Gryffindorr extends Student {
     }
 
     public void setFsNobleness(int fsNobleness) {
-        this.fsNobleness = fsNobleness;
-        updateSkillRate();
+        if (fsNobleness >= 0 && fsNobleness <= 100) {
+            this.fsNobleness = fsNobleness;
+            updateSkillRate();
+        }
     }
 
     @Override
@@ -84,6 +90,5 @@ public class Gryffindorr extends Student {
     public void compareStudent(Slytherin student1, Slytherin student2) {
 
     }
-
 
 }

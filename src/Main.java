@@ -14,7 +14,9 @@ public class Main {
         }
 
         for (int i = 1; i < allStudent.size(); i++) {
-            hogwarts.compareStudent((Object) allStudent.get(i-1), (Object) allStudent.get(i));
+            if (allStudent.get(i-1).getClass()==allStudent.get(i).getClass()) {
+                Hogwarts.compareStudent((Object) allStudent.get(i-1), (Object) allStudent.get(i));
+            }
         }
         Random random = new Random();
         Hogwarts.compareMagic((Student) allStudent.get(random.nextInt(allStudent.size())),

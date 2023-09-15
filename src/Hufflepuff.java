@@ -17,6 +17,11 @@ public class Hufflepuff extends Student {
     }
 
     @Override
+    public void compareStudent(Gryffindorr student1, Gryffindorr student2) {
+
+    }
+
+    @Override
     public String toString() {
         return " " + getNameOne() + " " + getNameTwo() +
                 "\nConjure:" + getMsConjure() +
@@ -33,36 +38,33 @@ public class Hufflepuff extends Student {
     }
 
     public void setFsIndustrious(int fsIndustrious) {
-        this.fsIndustrious = fsIndustrious;
-        updateSkillRate();
+        if (fsIndustrious >= 0 && fsIndustrious <= 100) {
+            this.fsIndustrious = fsIndustrious;
+            updateSkillRate();
+        }
     }
 
-    public int getFsCorrect() {
-        return fsCorrect;
-    }
+    public int getFsCorrect() { return fsCorrect; }
 
     public void setFsCorrect(int fsCorrect) {
-        this.fsCorrect = fsCorrect;
-        updateSkillRate();
+        if (fsCorrect >= 0 && fsCorrect <= 100) {
+            this.fsCorrect = fsCorrect;
+            updateSkillRate();
+        }
     }
 
-    public int getFsHonest() {
-        return fsHonest;
-    }
+    public int getFsHonest() { return fsHonest; }
 
     public void setFsHonest(int fsHonest) {
-        this.fsHonest = fsHonest;
-        updateSkillRate();
+        if (fsHonest >= 0 && fsHonest <= 100) {
+            this.fsHonest = fsHonest;
+            updateSkillRate();
+        }
     }
     public int getSkillRate() {
         return skillRate;
     }
     public void updateSkillRate() { this.skillRate = fsCorrect+fsHonest+fsIndustrious; }
-
-    @Override
-    public void compareStudent(Gryffindorr student1, Gryffindorr student2) {
-
-    }
 
     @Override
     public void compareStudent(Hufflepuff student1, Hufflepuff student2) {
@@ -82,4 +84,5 @@ public class Hufflepuff extends Student {
     public void compareStudent(Slytherin student1, Slytherin student2) {
 
     }
+
 }

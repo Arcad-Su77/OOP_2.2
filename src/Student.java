@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public abstract class Student {
+public abstract class Student extends Hogwarts {
     private int msConjure;
     private int msTransgress;
     private String nameOne;
@@ -26,9 +26,7 @@ public abstract class Student {
         return nameTwo;
     }
 
-    public void setNameTwo(String nameTwo) {
-        this.nameTwo = nameTwo;
-    }
+    public void setNameTwo(String nameTwo) { this.nameTwo = nameTwo; }
 
     public int getMsConjure() { return msConjure; }
 
@@ -46,8 +44,7 @@ public abstract class Student {
 
     public abstract void compareStudent(Hufflepuff student1, Hufflepuff student2);
 
-    public abstract void compareStudent(Slytherin student1, Slytherin student2);
-
     public abstract void compareStudent(Ravenclaw student1, Ravenclaw student2);
 
+    public abstract void compareStudent(Slytherin student1, Slytherin student2);
 }

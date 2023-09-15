@@ -19,13 +19,17 @@ public class Slytherin extends Student {
     }
 
 
+
+
     public int getFsCunning() {
         return fsCunning;
     }
 
     public void setFsCunning(int fsCunning) {
-        this.fsCunning = fsCunning;
-        updateSkillRate();
+        if (fsCunning >= 0 && fsCunning <= 60) {
+            this.fsCunning = fsCunning;
+            updateSkillRate();
+        }
     }
 
     public int getFsDetermination() {
@@ -33,8 +37,10 @@ public class Slytherin extends Student {
     }
 
     public void setFsDetermination(int fsDetermination) {
-        this.fsDetermination = fsDetermination;
-        updateSkillRate();
+        if (fsDetermination >= 0 && fsDetermination <= 60) {
+            this.fsDetermination = fsDetermination;
+            updateSkillRate();
+        }
     }
 
     public int getFsAmbition() {
@@ -42,8 +48,10 @@ public class Slytherin extends Student {
     }
 
     public void setFsAmbition(int fsAmbition) {
-        this.fsAmbition = fsAmbition;
-        updateSkillRate();
+        if (fsAmbition >= 0 && fsAmbition <= 60) {
+            this.fsAmbition = fsAmbition;
+            updateSkillRate();
+        }
     }
 
     public int getFsResourcefulness() {
@@ -51,16 +59,20 @@ public class Slytherin extends Student {
     }
 
     public void setFsResourcefulness(int fsResourcefulness) {
-        this.fsResourcefulness = fsResourcefulness;
-        updateSkillRate();
+        if (fsResourcefulness >= 0 && fsResourcefulness <= 60) {
+            this.fsResourcefulness = fsResourcefulness;
+            updateSkillRate();
+        }
     }
 
     public int getFsPowerLust() {
         return fsPowerLust;
     }
     public void setFsPowerLust(int fsPowerLust) {
-        this.fsPowerLust = fsPowerLust;
-        updateSkillRate();
+        if (fsPowerLust >= 0 && fsPowerLust <= 60) {
+            this.fsPowerLust = fsPowerLust;
+            updateSkillRate();
+        }
     }
 
     @Override
@@ -103,5 +115,4 @@ public class Slytherin extends Student {
     public void compareStudent(Ravenclaw student1, Ravenclaw student2) {
 
     }
-
 }

@@ -27,9 +27,9 @@ public class Hogwarts {
         }
     }
 
-    void compareStudent(Object student1, Object student) {
+     static void compareStudent(Object student1, Object student2) {
         System.out.println("Общий метод!");
-
     }
+
 
 }
