@@ -74,7 +74,6 @@ public class Ravenclaw extends Hogwarts {
     }
     public void updateSkillRate() { this.skillRate = fsCreativity+fsSmart+fsWise+fsWitty; }
 
-    @Override
     public void compareStudent(Ravenclaw student1) {
         if (student1.getSkillRate() > this.getSkillRate()) {
             System.out.println(student1.getName() + " лучший Когтевран, чем " + this.getName());

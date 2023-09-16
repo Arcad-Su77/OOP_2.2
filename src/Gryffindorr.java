@@ -1,4 +1,3 @@
-import java.util.Objects;
 import java.util.Random;
 
 public class Gryffindorr extends Hogwarts {
@@ -57,12 +56,7 @@ public class Gryffindorr extends Hogwarts {
                 ", nobleness:" + getFsNobleness() +
                 '}';
     }
-    @Override
-    public int hashCode() {
-        return Objects.hash(facultet);
-    }
 
-    @Override
     public void compareStudent(Gryffindorr student1) {
         if (student1.getSkillRate() > this.getSkillRate()) {
             System.out.println(student1.getName() + " лучший Гриффиндорец, чем " + this.getName());

@@ -62,7 +62,6 @@ public class Hufflepuff extends Hogwarts {
     }
     public void updateSkillRate() { this.skillRate = fsCorrect+fsHonest+fsIndustrious; }
 
-    @Override
     public void compareStudent(Hufflepuff student1) {
         if (student1.getSkillRate() > this.getSkillRate()) {
             System.out.println(student1.getName() + " лучший Пуффендуй, чем " + this.getName());

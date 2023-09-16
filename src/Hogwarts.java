@@ -29,15 +29,6 @@ public abstract class Hogwarts {
     public int getMsTransgress() { return msTransgress; }
 
     public void setMsTransgress(int msTransgress) { this.msTransgress = msTransgress; }
-//    public static void compareStudent(Object o, Object o1) {}
-
-    public void compareStudent(Gryffindorr student1) { }
-
-    public void compareStudent(Hufflepuff student1) { }
-
-    public void compareStudent(Ravenclaw student1) { }
-
-    public void compareStudent(Slytherin student1) { }
 
     public static void compareMagic(Hogwarts student1, Hogwarts student2) {
         if (student1.getMsConjure() > student2.getMsConjure()) {

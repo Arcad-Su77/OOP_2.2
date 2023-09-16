@@ -81,7 +81,7 @@ public class Slytherin extends Hogwarts {
         return skillRate;
     }
     public void updateSkillRate() { this.skillRate = fsAmbition+fsCunning+fsDetermination+fsResourcefulness+fsPowerLust; }
-    @Override
+
     public void compareStudent(Slytherin student1) {
         if (student1.getSkillRate() > this.getSkillRate()) {
             System.out.println(student1.getName() + " лучший Слизерин, чем " + this.getName());
