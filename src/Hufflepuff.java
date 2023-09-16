@@ -1,6 +1,7 @@
 import java.util.Random;
 
-public class Hufflepuff extends Student {
+public class Hufflepuff extends Hogwarts {
+    private final String facultet = "HUFFLEPUFF";
     private int skillRate;
     private int fsIndustrious;
     private int fsCorrect;
@@ -17,16 +18,11 @@ public class Hufflepuff extends Student {
     }
 
     @Override
-    public void compareStudent(Gryffindorr student1, Gryffindorr student2) {
-
-    }
-
-    @Override
     public String toString() {
-        return " " + getNameOne() + " " + getNameTwo() +
-                "\nConjure:" + getMsConjure() +
+        return " " + getNameOne() + " " + getNameTwo() + " " + facultet +
+                "\n\tConjure:" + getMsConjure() +
                 " Transgress:" + getMsTransgress() +
-                "\tskill Hufflepuff SkillRate:" + getSkillRate() +" {" +
+                "\n\tskill Hufflepuff SkillRate:" + getSkillRate() +" {" +
                 "Honest:" + getFsHonest() +
                 ", Correct:" + getFsCorrect() +
                 ", Industrious:" + getFsIndustrious() +
@@ -38,48 +34,40 @@ public class Hufflepuff extends Student {
     }
 
     public void setFsIndustrious(int fsIndustrious) {
-        this.fsIndustrious = fsIndustrious;
-        updateSkillRate();
+        if (fsIndustrious >= 0 && fsIndustrious <= 100) {
+            this.fsIndustrious = fsIndustrious;
+            updateSkillRate();
+        }
     }
 
-    public int getFsCorrect() {
-        return fsCorrect;
-    }
+    public int getFsCorrect() { return fsCorrect; }
 
     public void setFsCorrect(int fsCorrect) {
-        this.fsCorrect = fsCorrect;
-        updateSkillRate();
+        if (fsCorrect >= 0 && fsCorrect <= 100) {
+            this.fsCorrect = fsCorrect;
+            updateSkillRate();
+        }
     }
 
-    public int getFsHonest() {
-        return fsHonest;
-    }
+    public int getFsHonest() { return fsHonest; }
 
     public void setFsHonest(int fsHonest) {
-        this.fsHonest = fsHonest;
-        updateSkillRate();
+        if (fsHonest >= 0 && fsHonest <= 100) {
+            this.fsHonest = fsHonest;
+            updateSkillRate();
+        }
     }
     public int getSkillRate() {
         return skillRate;
     }
     public void updateSkillRate() { this.skillRate = fsCorrect+fsHonest+fsIndustrious; }
 
-    @Override
-    public void compareStudent(Hufflepuff student1, Hufflepuff student2) {
-        if (student1.getSkillRate() > student2.getSkillRate()) {
-            System.out.println(student1.getName() + " лучший Пуффендуй, чем " + student2.getName());
+    public void compareStudent(Hufflepuff student1) {
+        if (student1.getSkillRate() > this.getSkillRate()) {
+            System.out.println(student1.getName() + " лучший Пуффендуй, чем " + this.getName());
         } else {
-            System.out.println(student2.getName() + " лучший Пуффендуй, чем " + student1.getName());
+            System.out.println(this.getName() + " лучший Пуффендуй, чем " + student1.getName());
         }
     }
 
-    @Override
-    public void compareStudent(Ravenclaw student1, Ravenclaw student2) {
-
-    }
-
-    @Override
-    public void compareStudent(Slytherin student1, Slytherin student2) {
-
-    }
 }

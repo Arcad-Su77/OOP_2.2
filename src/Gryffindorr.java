@@ -1,6 +1,7 @@
 import java.util.Random;
 
-public class Gryffindorr extends Student {
+public class Gryffindorr extends Hogwarts {
+    private final String facultet = "GRYFFINDORR";
     private int skillRate;
     private int fsHonor;
     private int fsBraveness;
@@ -14,77 +15,54 @@ public class Gryffindorr extends Student {
         this.fsNobleness = random.nextInt(100);
         updateSkillRate();
     }
-
-
     public int getFsHonor() {
         return fsHonor;
     }
 
     public void setFsHonor(int fsHonor) {
-        this.fsHonor = fsHonor;
-        updateSkillRate();
+        if (fsHonor >= 0 && fsHonor <= 100) {
+            this.fsHonor = fsHonor;
+            updateSkillRate();
+        }
     }
-
-    public int getFsBraveness() {
-        return fsBraveness;
-    }
-
+    public int getFsBraveness() { return fsBraveness; }
     public void setFsBraveness(int fsBraveness) {
-        this.fsBraveness = fsBraveness;
-        updateSkillRate();
+        if (fsBraveness >= 0 && fsBraveness <= 100) {
+            this.fsBraveness = fsBraveness;
+            updateSkillRate();
+        }
     }
-
-    public int getFsNobleness() {
-        return fsNobleness;
-    }
-
+    public int getFsNobleness() { return fsNobleness; }
     public void setFsNobleness(int fsNobleness) {
-        this.fsNobleness = fsNobleness;
-        updateSkillRate();
+        if (fsNobleness >= 0 && fsNobleness <= 100) {
+            this.fsNobleness = fsNobleness;
+            updateSkillRate();
+        }
     }
-
-    @Override
-    public String toString() {
-        return " " + getNameOne() + " " + getNameTwo() +
-                "\nConjure:" + getMsConjure() +
-                " Transgress:" + getMsTransgress() +
-                "\tskill Gryffindorr SkillRate:" + getSkillRate() +" {" +
-                "honor:" + getFsHonor() +
-                ", braveness:" + getFsBraveness() +
-                ", nobleness:" + getFsNobleness() +
-                '}';
-    }
-
     public int getSkillRate() {
         return skillRate;
     }
     public void updateSkillRate() {
         this.skillRate = fsBraveness+fsHonor+fsNobleness;
     }
-
     @Override
-    public void compareStudent(Gryffindorr student1, Gryffindorr student2) {
-        if (student1.getSkillRate() > student2.getSkillRate()) {
-            System.out.println(student1.getName() + " лучший Гриффиндорец, чем " + student2.getName());
+    public String toString() {
+        return " " + getNameOne() + " " + getNameTwo() + " " + facultet +
+                "\n\tConjure:" + getMsConjure() +
+                " Transgress:" + getMsTransgress() +
+                "\n\tskill Gryffindorr SkillRate:" + getSkillRate() +" {" +
+                "honor:" + getFsHonor() +
+                ", braveness:" + getFsBraveness() +
+                ", nobleness:" + getFsNobleness() +
+                '}';
+    }
+
+    public void compareStudent(Gryffindorr student1) {
+        if (student1.getSkillRate() > this.getSkillRate()) {
+            System.out.println(student1.getName() + " лучший Гриффиндорец, чем " + this.getName());
         } else {
-            System.out.println(student2.getName() + " лучший Гриффиндорец, чем " + student1.getName());
+            System.out.println(this.getName() + " лучший Гриффиндорец, чем " + student1.getName());
         }
     }
-
-    @Override
-    public void compareStudent(Hufflepuff student1, Hufflepuff student2) {
-
-    }
-
-    @Override
-    public void compareStudent(Ravenclaw student1, Ravenclaw student2) {
-
-    }
-
-    @Override
-    public void compareStudent(Slytherin student1, Slytherin student2) {
-
-    }
-
 
 }

@@ -1,6 +1,7 @@
 import java.util.Random;
 
-public class Ravenclaw extends Student {
+public class Ravenclaw extends Hogwarts {
+    private final String facultet = "RAVENCLAS";
     private int fsSmart;
     int fsWise;
     int fsWitty;
@@ -16,59 +17,49 @@ public class Ravenclaw extends Student {
         this.fsWitty = random.nextInt(75);
         updateSkillRate();
     }
-
-    @Override
-    public void compareStudent(Gryffindorr student1, Gryffindorr student2) {
-
-    }
-
-    @Override
-    public void compareStudent(Hufflepuff student1, Hufflepuff student2) {
-
-    }
-
     public int getFsSmart() {
         return fsSmart;
     }
 
     public void setFsSmart(int fsSmart) {
-        this.fsSmart = fsSmart;
-        updateSkillRate();
+        if (fsSmart >= 0 && fsSmart <= 75) {
+            this.fsSmart = fsSmart;
+            updateSkillRate();
+        }
     }
-
     public int getFsWise() {
         return fsWise;
     }
-
     public void setFsWise(int fsWise) {
-        this.fsWise = fsWise;
-        updateSkillRate();
+        if (fsWise >= 0 && fsWise <= 75) {
+            this.fsWise = fsWise;
+            updateSkillRate();
+        }
     }
-
     public int getFsWitty() {
         return fsWitty;
     }
-
     public void setFsWitty(int fsWitty) {
-        this.fsWitty = fsWitty;
-        updateSkillRate();
+        if (fsWitty >= 0 && fsWitty <= 75) {
+            this.fsWitty = fsWitty;
+            updateSkillRate();
+        }
     }
-
     public int getFsCreativity() {
         return fsCreativity;
     }
-
     public void setFsCreativity(int fsCreativity) {
-        this.fsCreativity = fsCreativity;
-        updateSkillRate();
+        if (fsCreativity >= 0 && fsCreativity <= 75) {
+            this.fsCreativity = fsCreativity;
+            updateSkillRate();
+        }
     }
-
     @Override
     public String toString() {
-        return " " + this.getNameOne() + " " + this.getNameTwo() +
-                "\nConjure:" + getMsConjure() +
+        return " " + this.getNameOne() + " " + this.getNameTwo() + " " + facultet +
+                "\n\tConjure:" + getMsConjure() +
                 " Transgress:" + getMsTransgress() +
-                "\tskill Ravenclaw SkillRate:" + getSkillRate() + " {" +
+                "\n\tskill Ravenclaw SkillRate:" + getSkillRate() + " {" +
                 "fsSmart:" + getFsSmart() +
                 ", fsWise:" + getFsWise() +
                 ", fsWitty:" + getFsWitty() +
@@ -80,17 +71,12 @@ public class Ravenclaw extends Student {
     }
     public void updateSkillRate() { this.skillRate = fsCreativity+fsSmart+fsWise+fsWitty; }
 
-    @Override
-    public void compareStudent(Ravenclaw student1, Ravenclaw student2) {
-        if (student1.getSkillRate() > student2.getSkillRate()) {
-            System.out.println(student1.getName() + " лучший Когтевран, чем " + student2.getName());
+    public void compareStudent(Ravenclaw student1) {
+        if (student1.getSkillRate() > this.getSkillRate()) {
+            System.out.println(student1.getName() + " лучший Когтевран, чем " + this.getName());
         } else {
-            System.out.println(student2.getName() + " лучший Когтевран, чем " + student1.getName());
+            System.out.println(this.getName() + " лучший Когтевран, чем " + student1.getName());
         }
     }
 
-    @Override
-    public void compareStudent(Slytherin student1, Slytherin student2) {
-
-    }
 }
