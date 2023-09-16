@@ -17,9 +17,6 @@ public class Ravenclaw extends Hogwarts {
         this.fsWitty = random.nextInt(75);
         updateSkillRate();
     }
-
-
-
     public int getFsSmart() {
         return fsSmart;
     }
